@@ -1,0 +1,6 @@
+<p>
+  parent-component works!
+  {{ amount }}
+</p>
+
+<app-child-component [amount]="amount" (amountOutput)="this.amount = $event"></app-child-component>

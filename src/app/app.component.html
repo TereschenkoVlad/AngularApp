@@ -17,5 +17,18 @@
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
 </ul>
+<app-list></app-list>
+<app-parent-component></app-parent-component>
 
 <router-outlet></router-outlet>
+<ul>
+  <li *ngFor="let item of list; let i = index">
+    <h2>{{ item.title }}</h2>
+    <p>{{ item.description }}</p>
+    <button (click)="btnDelete(item.id, i)">delete {{item.id}}</button>
+  </li>
+</ul>
+
+<button (click)="btnClick()">Get item</button>
+
+<button (click)="btnPost()">Add p0ost</button>
